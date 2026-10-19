@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #0c171b;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #0c171b;
+  }
+}
+
+/* Custom hollow / stroked outline text styling matching video ("Nature's Perfect Hideaways") */
+.text-hollow {
+  color: rgba(255, 255, 255, 0.12);
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.72);
+  text-stroke: 1.5px rgba(255, 255, 255, 0.72);
+  paint-order: stroke fill;
+  position: relative;
+  display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+  .text-hollow {
+    -webkit-text-stroke: 1.1px rgba(255, 255, 255, 0.7);
+    text-stroke: 1.1px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Crisp image rendering */
+.crisp-img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Glassmorphism utility classes with enhanced blur depth */
+.glass-panel {
+  background: rgba(12, 20, 24, 0.62);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080f12;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.6);
+}
