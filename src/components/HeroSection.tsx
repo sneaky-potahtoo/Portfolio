@@ -52,9 +52,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded }) => {
       id="hero"
       className="relative w-full min-h-[calc(100vh-48px)] flex flex-col justify-between p-6 md:p-10 pt-20 md:pt-24 select-none scroll-mt-24"
     >
-      {/* Warm Ambient Cabin Window Glow Pulse */}
-      <div className="absolute top-[52%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-72 h-36 md:w-[450px] md:h-56 bg-amber-500/20 rounded-full blur-[80px] pointer-events-none animate-pulse" />
-
       {/* Hero Content: Strictly hidden until preloader finishes (isLoaded: true) */}
       <motion.div
         variants={containerVariants}

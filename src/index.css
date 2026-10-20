@@ -46,6 +46,44 @@
   transform: translateZ(0);
 }
 
+/* Only the transparent, photograph-derived light pixels animate. */
+.cabin-light-layer {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.cabin-light-layer[data-light-state="flickering"] {
+  animation: cabin-light-startup 1750ms linear forwards;
+}
+
+.cabin-light-layer[data-light-state="on"] {
+  opacity: 1;
+  will-change: auto;
+}
+
+@keyframes cabin-light-startup {
+  0%, 7% { opacity: 0; }
+  10% { opacity: 0.3; }
+  13% { opacity: 0.3; }
+  16% { opacity: 0.05; }
+  23% { opacity: 0.05; }
+  27% { opacity: 0.65; }
+  30% { opacity: 0.65; }
+  34% { opacity: 0.2; }
+  43% { opacity: 0.2; }
+  49% { opacity: 0.85; }
+  54% { opacity: 0.6; }
+  77% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cabin-light-layer[data-light-state="flickering"] {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* Glassmorphism utility classes with enhanced blur depth */
 .glass-panel {
   background: rgba(12, 20, 24, 0.62);

@@ -9,6 +9,7 @@ import { ContactSection } from './components/ContactSection';
 import { Toast } from './components/Toast';
 import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { AmbientAtmosphere } from './components/AmbientAtmosphere';
+import { CabinLightBackground } from './components/CabinLightBackground';
 
 // Centralized configuration re-exported directly for quick 5-second customization
 export { PORTFOLIO_CONFIG };
@@ -67,12 +68,7 @@ export function App() {
           style={{ y: backgroundY, scale: backgroundScale }}
           className="absolute -inset-8 bg-cover bg-center bg-no-repeat crisp-img will-change-transform"
         >
-          <img
-            src="/cabin-bg.png"
-            alt="Misty cabin in pine forest at dusk"
-            className="w-full h-full object-cover crisp-img"
-            loading="eager"
-          />
+          <CabinLightBackground isLoaded={isLoaded} />
         </motion.div>
 
         {/* Ambient Dark Slate-Teal Gradient Overlay that gently deepens on scroll */}
@@ -87,8 +83,6 @@ export function App() {
         {/* Vignette Overlay (Darker edges matching the reference visual) */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(5,11,14,0.78)_100%)]" />
 
-        {/* Dynamic Warm Amber Glow Behind Cabin Windows */}
-        <div className="absolute top-[48%] left-[48%] -translate-x-1/2 -translate-y-1/2 w-[550px] h-[340px] bg-amber-600/15 rounded-full blur-[130px] animate-pulse" />
       </div>
 
       {/* Floating Canvas Embers & Misty Wisps */}
