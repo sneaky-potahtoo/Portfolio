@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, type Variants, useScroll, useTransform } from "framer-motion";
 import { PORTFOLIO_CONFIG } from "../config";
-import { Terminal, Cpu, ArrowDownRight, ExternalLink } from "lucide-react";
+import { ArrowDownRight, ExternalLink } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 
 interface HeroSectionProps {

@@ -123,7 +123,7 @@ export const AboutSection: React.FC = () => {
             </div>
 
             {/* Tech Stack Pills Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {filteredSkills.map((skill) => (
                 <motion.div
                   key={skill.name}
@@ -139,9 +139,6 @@ export const AboutSection: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Minimal Footer Row */}
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-mono text-white/50"></div>
           </TiltCard>
         </motion.div>
       </motion.div>
