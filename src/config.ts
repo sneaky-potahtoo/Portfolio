@@ -41,7 +41,6 @@ export interface PortfolioConfig {
     titleOutline: string;
     titleSolid2: string;
     bio: string;
-    featuredPills: Array<{ label: string; icon: string }>;
     ctaText: string;
   };
   skills: {
@@ -50,8 +49,6 @@ export interface PortfolioConfig {
     headingOutline: string;
     title: string;
     subtitle: string;
-    footerNote: string;
-    footerStatus: string;
     items: SkillItem[];
   };
   contact: {
@@ -63,8 +60,6 @@ export interface PortfolioConfig {
   };
   footer: {
     copyright: string;
-    tagline: string;
-    signalText: string;
     backToTopText: string;
   };
   // Direct shortcuts for backward compatibility and quick edits
@@ -87,7 +82,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
   profile: {
     name: "Pranjal",
     brand: "Pranjal.dev",
-    role: "Full-Stack Developer & Problem Solver",
+    role: "Full-Stack Developer",
     location: "India (IST)",
     tagline: "A Quiet Workspace for Deep Focus",
   },
@@ -95,7 +90,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
   // Direct top-level shortcuts
   name: "Pranjal",
   brand: "Pranjal.dev",
-  role: "Full-Stack Developer & Problem Solver",
+  role: "Full-Stack Developer",
   links: {
     github: GITHUB_URL,
     linkedin: LINKEDIN_URL,
@@ -124,11 +119,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
     titleOutline: "Cleaner Codes.",
     titleSolid2: "Happy Accidents.",
     bio: "Welcome to my quiet corner of the internet, where I build full-stack projects, dodge existential dread, and confidently rebrand questionable choices as happy accidents.",
-    featuredPills: [
-      { label: "React & TS", icon: "terminal" },
-      { label: "C++ & Node.js", icon: "cpu" },
-    ],
-    ctaText: "Explore My Craft",
+    ctaText: "Explore",
   },
 
   // 5. Skills & Tech Stack (Single Source of Truth)
@@ -139,8 +130,6 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
     title: "Tech Stack",
     subtitle:
       "Core technologies & tools for engineering scalable, high-craft systems.",
-    footerNote: "Stack: Modern & Typed Architecture",
-    footerStatus: "100% Type-Safe & Production-Ready",
     items: [
       // Frontend
       {
@@ -264,7 +253,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
     titleSolid: "The Light's ",
     titleOutline: "Always On.",
     subtitle:
-      "Whether you want to collaborate on a project, talk tech, or just say hi—reach out directly through any of the three channels below.",
+      "Whether you want to collaborate on a project, talk tech, or just say hi - reach out directly through any of the three channels below.",
     channels: [
       {
         id: "github",
@@ -291,8 +280,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
       {
         id: "email",
         title: "Gmail",
-        description:
-          "Drop a direct email straight to my inbox—I always reply promptly.",
+        description: "Drop a direct email straight to my inbox.",
         categoryLabel: "DIRECT LINE",
         metaLabel: "Response",
         metaValue: "Within 24 Hours",
@@ -306,9 +294,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
 
   // 6. Minimal Footer
   footer: {
-    copyright: "© 2026 Pranjal.",
-    tagline: "Crafted in the quiet.",
-    signalText: "Cabin Signal: Online",
+    copyright: "© 2026 Pranjal",
     backToTopText: "Back to Top",
   },
 };

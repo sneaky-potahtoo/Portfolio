@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PORTFOLIO_CONFIG } from '../config';
 
 interface PreloaderProps {
   onComplete: () => void;
@@ -98,41 +97,23 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
           />
         </svg>
 
-        {/* Preloader Elements: Top Loading Bar & Bottom-Left Counter */}
+        {/* Preloader Elements: Bottom-Left Counter */}
         <AnimatePresence>
           {!isFadingOut && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
-              className="absolute inset-0 p-6 md:p-10 flex flex-col justify-between pointer-events-none"
+              className="absolute inset-0 p-6 md:p-10 flex flex-col justify-end pointer-events-none"
             >
-              {/* Top-Left Relocated Initialization Loading Bar */}
-              <div className="flex items-center gap-3">
-                <div className="h-[2px] bg-white/15 w-24 md:w-36 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-white/90 transition-all duration-75 ease-out rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                    style={{ width: `${progress}%` }}
-                  />
-                </div>
-                <span className="text-[11px] font-mono tracking-widest text-white/60 uppercase font-medium">
-                  {PORTFOLIO_CONFIG.preloader.statusText} // {progress}%
-                </span>
-              </div>
-
               {/* Bottom-Left 0% -> 100% Counter */}
-              <div className="flex flex-col">
-                <div className="flex items-baseline gap-1">
-                  <span className="font-light text-6xl md:text-8xl text-white/85 tracking-tighter tabular-nums select-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
-                    {progress}
-                  </span>
-                  <span className="text-2xl md:text-3xl font-light text-white/50 select-none">
-                    %
-                  </span>
-                </div>
-                <p className="text-xs tracking-wider uppercase font-mono text-white/45 mt-1">
-                  {PORTFOLIO_CONFIG.preloader.subtitle}
-                </p>
+              <div className="flex items-baseline gap-1">
+                <span className="font-light text-6xl md:text-8xl text-white/85 tracking-tighter tabular-nums select-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
+                  {progress}
+                </span>
+                <span className="text-2xl md:text-3xl font-light text-white/50 select-none">
+                  %
+                </span>
               </div>
             </motion.div>
           )}

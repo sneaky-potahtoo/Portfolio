@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import { PORTFOLIO_CONFIG, type ContactChannel } from "../config";
-import {
-  Mail,
-  Copy,
-  Check,
-  ArrowUpRight,
-  ChevronUp,
-} from "lucide-react";
+import { Mail, Copy, Check, ArrowUpRight, ChevronUp } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
@@ -56,12 +50,21 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const getChannelIcon = (id: string) => {
     switch (id) {
       case "github":
-        return <GithubIcon className="w-6 h-6 fill-current group-hover:scale-110 transition-transform" />;
+        return (
+          <GithubIcon className="w-6 h-6 fill-current group-hover:scale-110 transition-transform" />
+        );
       case "linkedin":
-        return <LinkedInIcon className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" />;
+        return (
+          <LinkedInIcon className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" />
+        );
       case "email":
       default:
-        return <Mail size={24} className="group-hover:scale-110 transition-transform" />;
+        return (
+          <Mail
+            size={24}
+            className="group-hover:scale-110 transition-transform"
+          />
+        );
     }
   };
 
@@ -70,26 +73,31 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       case "github":
         return {
           glowColor: "rgba(255, 255, 255, 0.1)",
-          iconBox: "bg-white/5 border-white/10 text-white/90 group-hover:border-white/30 group-hover:bg-white/10",
+          iconBox:
+            "bg-white/5 border-white/10 text-white/90 group-hover:border-white/30 group-hover:bg-white/10",
           topHighlight: "via-white/20",
           badgeColor: "text-white/40",
-          btnClass: "bg-white/10 hover:bg-white text-white hover:text-slate-950 border-white/15",
+          btnClass:
+            "bg-white/10 hover:bg-white text-white hover:text-slate-950 border-white/15",
           hoverTitle: "group-hover:text-amber-100",
         };
       case "linkedin":
         return {
           glowColor: "rgba(56, 189, 248, 0.12)",
-          iconBox: "bg-cyan-500/10 border-cyan-500/20 text-cyan-300 group-hover:border-cyan-400 group-hover:bg-cyan-500/20",
+          iconBox:
+            "bg-cyan-500/10 border-cyan-500/20 text-cyan-300 group-hover:border-cyan-400 group-hover:bg-cyan-500/20",
           topHighlight: "via-cyan-400/30",
           badgeColor: "text-cyan-400/60",
-          btnClass: "bg-white/10 hover:bg-white text-white hover:text-slate-950 border-white/15",
+          btnClass:
+            "bg-white/10 hover:bg-white text-white hover:text-slate-950 border-white/15",
           hoverTitle: "group-hover:text-cyan-100",
         };
       case "email":
       default:
         return {
           glowColor: "rgba(245, 158, 11, 0.16)",
-          iconBox: "bg-amber-500/15 border-amber-500/30 text-amber-400 group-hover:border-amber-400 group-hover:bg-amber-500/25 shadow-[0_0_15px_rgba(245,158,11,0.25)]",
+          iconBox:
+            "bg-amber-500/15 border-amber-500/30 text-amber-400 group-hover:border-amber-400 group-hover:bg-amber-500/25 shadow-[0_0_15px_rgba(245,158,11,0.25)]",
           topHighlight: "via-amber-400",
           badgeColor: "text-amber-400/80",
           btnClass: "bg-white hover:bg-amber-400 text-slate-950",
@@ -136,7 +144,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             className="text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white leading-tight"
           >
             <span>{contact.titleSolid}</span>
-            <span className="text-hollow inline-block">{contact.titleOutline}</span>
+            <span className="text-hollow inline-block">
+              {contact.titleOutline}
+            </span>
           </motion.h2>
 
           <motion.p
@@ -168,23 +178,33 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <TiltCard
                   glowColor={styles.glowColor}
                   className={`h-full glass-panel rounded-3xl p-7 flex flex-col justify-between border ${
-                    isEmail ? "border-amber-400/25 hover:border-amber-400/50" : "border-white/12 hover:border-white/30"
+                    isEmail
+                      ? "border-amber-400/25 hover:border-amber-400/50"
+                      : "border-white/12 hover:border-white/30"
                   } hover:shadow-2xl transition-all group relative overflow-hidden`}
                 >
                   {/* Ambient top highlight */}
-                  <div className={`absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent ${styles.topHighlight} to-transparent`} />
+                  <div
+                    className={`absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent ${styles.topHighlight} to-transparent`}
+                  />
 
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center transition-all shadow-sm ${styles.iconBox}`}>
+                      <div
+                        className={`w-12 h-12 rounded-2xl border flex items-center justify-center transition-all shadow-sm ${styles.iconBox}`}
+                      >
                         {getChannelIcon(channel.id)}
                       </div>
-                      <span className={`text-[11px] font-mono uppercase tracking-wider ${styles.badgeColor}`}>
+                      <span
+                        className={`text-[11px] font-mono uppercase tracking-wider ${styles.badgeColor}`}
+                      >
                         {channel.categoryLabel}
                       </span>
                     </div>
 
-                    <h3 className={`text-xl font-semibold text-white tracking-tight mb-2 flex items-center gap-2 transition-colors ${styles.hoverTitle}`}>
+                    <h3
+                      className={`text-xl font-semibold text-white tracking-tight mb-2 flex items-center gap-2 transition-colors ${styles.hoverTitle}`}
+                    >
                       <span>{channel.title}</span>
                       {channel.badge && (
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/20">
@@ -203,8 +223,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       <span className="text-white/45 font-mono text-[11px] uppercase">
                         {channel.metaLabel}
                       </span>
-                      <span className={`font-medium flex items-center gap-1.5 ${isEmail ? "text-amber-300" : "text-white/90"}`}>
-                        {channel.id === "github" && <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />}
+                      <span
+                        className={`font-medium flex items-center gap-1.5 ${isEmail ? "text-amber-300" : "text-white/90"}`}
+                      >
+                        {channel.id === "github" && (
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                        )}
                         {channel.metaValue}
                       </span>
                     </div>
@@ -261,13 +285,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         <div className="relative z-10 pt-8 mt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50 font-mono">
           <div className="flex items-center gap-2">
             <span>{footer.copyright}</span>
-            <span className="text-white/30">•</span>
-            <span>{footer.tagline}</span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-emerald-400/90">{footer.signalText}</span>
           </div>
 
           <motion.button
