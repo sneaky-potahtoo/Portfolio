@@ -41,7 +41,6 @@ export interface PortfolioConfig {
     titleOutline: string;
     titleSolid2: string;
     bio: string;
-    featuredPills: Array<{ label: string; icon: string }>;
     ctaText: string;
   };
   skills: {
@@ -83,7 +82,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
   profile: {
     name: "Pranjal",
     brand: "Pranjal.dev",
-    role: "Full-Stack Developer & Problem Solver",
+    role: "Full-Stack Developer",
     location: "India (IST)",
     tagline: "A Quiet Workspace for Deep Focus",
   },
@@ -91,7 +90,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
   // Direct top-level shortcuts
   name: "Pranjal",
   brand: "Pranjal.dev",
-  role: "Full-Stack Developer & Problem Solver",
+  role: "Full-Stack Developer",
   links: {
     github: GITHUB_URL,
     linkedin: LINKEDIN_URL,
@@ -120,11 +119,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
     titleOutline: "Cleaner Codes.",
     titleSolid2: "Happy Accidents.",
     bio: "Welcome to my quiet corner of the internet, where I build full-stack projects, dodge existential dread, and confidently rebrand questionable choices as happy accidents.",
-    featuredPills: [
-      { label: "React & TS", icon: "terminal" },
-      { label: "C++ & Node.js", icon: "cpu" },
-    ],
-    ctaText: "Explore My Craft",
+    ctaText: "Explore",
   },
 
   // 5. Skills & Tech Stack (Single Source of Truth)

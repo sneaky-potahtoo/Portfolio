@@ -73,9 +73,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded }) => {
             <span className="text-white hover:text-amber-100 transition-colors">
               {hero.titleSolid1}
             </span>
-            <span className="text-hollow my-0.5">
-              {hero.titleOutline}
-            </span>
+            <span className="text-hollow my-0.5">{hero.titleOutline}</span>
             <span className="text-white hover:text-amber-100 transition-colors">
               {hero.titleSolid2}
             </span>
@@ -119,7 +117,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded }) => {
                     <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-none">
                       {profile.name}
                     </h3>
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   </div>
                   <p className="text-xs text-white/70 font-normal mt-1.5 flex items-center gap-1.5">
                     <span>{profile.role}</span>
@@ -138,26 +135,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded }) => {
                 >
                   <ExternalLink size={15} />
                 </motion.a>
-              </div>
-
-              {/* Featured Tech Pills Row */}
-              <div className="grid grid-cols-2 gap-2.5 mb-4">
-                {hero.featuredPills.map((pill) => (
-                  <motion.div
-                    key={pill.label}
-                    whileHover={{ y: -2 }}
-                    className="glass-pill rounded-xl px-3 py-2.5 flex items-center justify-between text-xs font-medium text-white/90 group cursor-default"
-                  >
-                    <div className="flex items-center gap-2 truncate">
-                      {pill.icon === "terminal" ? (
-                        <Terminal className="w-3.5 h-3.5 text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
-                      ) : (
-                        <Cpu className="w-3.5 h-3.5 text-cyan-400 shrink-0 group-hover:scale-110 transition-transform" />
-                      )}
-                      <span className="truncate">{pill.label}</span>
-                    </div>
-                  </motion.div>
-                ))}
               </div>
 
               {/* Primary Card CTA Button */}
