@@ -141,13 +141,7 @@ export const AboutSection: React.FC = () => {
             </div>
 
             {/* Minimal Footer Row */}
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-mono text-white/50">
-              <span>{skills.footerNote}</span>
-              <span className="text-emerald-400 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                {skills.footerStatus}
-              </span>
-            </div>
+            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-mono text-white/50"></div>
           </TiltCard>
         </motion.div>
       </motion.div>

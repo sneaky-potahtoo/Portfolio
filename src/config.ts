@@ -50,8 +50,6 @@ export interface PortfolioConfig {
     headingOutline: string;
     title: string;
     subtitle: string;
-    footerNote: string;
-    footerStatus: string;
     items: SkillItem[];
   };
   contact: {
@@ -63,8 +61,6 @@ export interface PortfolioConfig {
   };
   footer: {
     copyright: string;
-    tagline: string;
-    signalText: string;
     backToTopText: string;
   };
   // Direct shortcuts for backward compatibility and quick edits
@@ -139,8 +135,6 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
     title: "Tech Stack",
     subtitle:
       "Core technologies & tools for engineering scalable, high-craft systems.",
-    footerNote: "Stack: Modern & Typed Architecture",
-    footerStatus: "100% Type-Safe & Production-Ready",
     items: [
       // Frontend
       {
@@ -264,7 +258,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
     titleSolid: "The Light's ",
     titleOutline: "Always On.",
     subtitle:
-      "Whether you want to collaborate on a project, talk tech, or just say hi—reach out directly through any of the three channels below.",
+      "Whether you want to collaborate on a project, talk tech, or just say hi - reach out directly through any of the three channels below.",
     channels: [
       {
         id: "github",
@@ -291,8 +285,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
       {
         id: "email",
         title: "Gmail",
-        description:
-          "Drop a direct email straight to my inbox—I always reply promptly.",
+        description: "Drop a direct email straight to my inbox.",
         categoryLabel: "DIRECT LINE",
         metaLabel: "Response",
         metaValue: "Within 24 Hours",
@@ -306,9 +299,7 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
 
   // 6. Minimal Footer
   footer: {
-    copyright: "© 2026 Pranjal.",
-    tagline: "Crafted in the quiet.",
-    signalText: "Cabin Signal: Online",
+    copyright: "© 2026 Pranjal",
     backToTopText: "Back to Top",
   },
 };
